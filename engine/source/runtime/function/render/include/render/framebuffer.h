@@ -18,9 +18,10 @@ namespace Pilot
 {
     inline static std::atomic<size_t> CurrentMaxGuid = 0;
 
+    //像素格式
     enum class PILOT_PIXEL_FORMAT : size_t
     {
-        PILOT_PIXEL_FORMAT_R8G8B8_UNORM = 1,
+        PILOT_PIXEL_FORMAT_R8G8B8_UNORM = 1,//RGB各自8bit用于表示
         PILOT_PIXEL_FORMAT_R8G8B8_SRGB,
         PILOT_PIXEL_FORMAT_R8G8B8A8_UNORM,
         PILOT_PIXEL_FORMAT_R8G8B8A8_SRGB,

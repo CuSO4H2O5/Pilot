@@ -13,7 +13,12 @@ highp vec3 Uncharted2Tonemap(highp vec3 x);
 void main()
 {
    highp vec3 color = subpassLoad(in_color).rgb;
+
+   highp vec3 fccolor = vec3(255.0/255.99, 0.0, 0.0);
+   color.rgb =  0.5 * (fccolor.rgb + color.rgb);
    
+
+
    // tone mapping
    // result_color = Uncharted2Tonemap(result_color * uboParams.exposure);
    color = Uncharted2Tonemap(color * 4.5f);

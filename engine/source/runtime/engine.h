@@ -20,6 +20,7 @@ namespace Pilot
         std::filesystem::path m_config_file_path;
     };
 
+    //用于屏幕更新的三缓冲
     class ThreeFrameBuffers
     {
         union TriBuffer
